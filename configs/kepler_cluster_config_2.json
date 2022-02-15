@@ -1,0 +1,497 @@
+{
+    "version": "v1",
+    "config": {
+        "visState": {
+            "filters": [],
+            "layers": [
+                {
+                    "id": "a2tmjh",
+                    "type": "point",
+                    "config": {
+                        "dataId": "point",
+                        "label": "Point",
+                        "color": [
+                            246,
+                            209,
+                            138
+                        ],
+                        "columns": {
+                            "lat": "latitude",
+                            "lng": "longitude",
+                            "altitude": null
+                        },
+                        "isVisible": false,
+                        "visConfig": {
+                            "radius": 6.6,
+                            "fixedRadius": false,
+                            "opacity": 1,
+                            "outline": false,
+                            "thickness": 2,
+                            "strokeColor": null,
+                            "colorRange": {
+                                "name": "Uber Viz Qualitative 4",
+                                "type": "qualitative",
+                                "category": "Uber",
+                                "colors": [
+                                    "#12939A",
+                                    "#DDB27C",
+                                    "#88572C",
+                                    "#FF991F",
+                                    "#F15C17",
+                                    "#223F9A",
+                                    "#DA70BF",
+                                    "#125C77",
+                                    "#4DC19C",
+                                    "#776E57",
+                                    "#17B8BE",
+                                    "#F6D18A",
+                                    "#B7885E",
+                                    "#FFCB99",
+                                    "#F89570",
+                                    "#829AE3",
+                                    "#E79FD5",
+                                    "#1E96BE",
+                                    "#89DAC1",
+                                    "#B3AD9E"
+                                ]
+                            },
+                            "strokeColorRange": {
+                                "name": "Global Warming",
+                                "type": "sequential",
+                                "category": "Uber",
+                                "colors": [
+                                    "#5A1846",
+                                    "#900C3F",
+                                    "#C70039",
+                                    "#E3611C",
+                                    "#F1920E",
+                                    "#FFC300"
+                                ]
+                            },
+                            "radiusRange": [
+                                0,
+                                50
+                            ],
+                            "filled": true
+                        },
+                        "hidden": false,
+                        "textLabel": [
+                            {
+                                "field": {
+                                    "name": "isim",
+                                    "type": "string"
+                                },
+                                "color": [
+                                    28,
+                                    15,
+                                    88
+                                ],
+                                "size": 14,
+                                "offset": [
+                                    0,
+                                    0
+                                ],
+                                "anchor": "middle",
+                                "alignment": "top"
+                            }
+                        ]
+                    },
+                    "visualChannels": {
+                        "colorField": {
+                            "name": "label",
+                            "type": "integer"
+                        },
+                        "colorScale": "quantile",
+                        "strokeColorField": null,
+                        "strokeColorScale": "quantile",
+                        "sizeField": null,
+                        "sizeScale": "linear"
+                    }
+                },
+                {
+                    "id": "bivdipt",
+                    "type": "geojson",
+                    "config": {
+                        "dataId": "stores",
+                        "label": "point",
+                        "color": [
+                            183,
+                            136,
+                            94
+                        ],
+                        "columns": {
+                            "geojson": "geometry"
+                        },
+                        "isVisible": true,
+                        "visConfig": {
+                            "opacity": 0.8,
+                            "strokeOpacity": 0.8,
+                            "thickness": 0,
+                            "strokeColor": null,
+                            "colorRange": {
+                                "name": "Uber Viz Qualitative 4",
+                                "type": "qualitative",
+                                "category": "Uber",
+                                "colors": [
+                                    "#12939A",
+                                    "#DDB27C",
+                                    "#88572C",
+                                    "#FF991F",
+                                    "#F15C17",
+                                    "#223F9A",
+                                    "#DA70BF",
+                                    "#125C77",
+                                    "#4DC19C",
+                                    "#776E57",
+                                    "#17B8BE",
+                                    "#F6D18A",
+                                    "#B7885E",
+                                    "#FFCB99",
+                                    "#F89570",
+                                    "#829AE3",
+                                    "#E79FD5",
+                                    "#1E96BE",
+                                    "#89DAC1",
+                                    "#B3AD9E"
+                                ]
+                            },
+                            "strokeColorRange": {
+                                "name": "Global Warming",
+                                "type": "sequential",
+                                "category": "Uber",
+                                "colors": [
+                                    "#5A1846",
+                                    "#900C3F",
+                                    "#C70039",
+                                    "#E3611C",
+                                    "#F1920E",
+                                    "#FFC300"
+                                ]
+                            },
+                            "radius": 14.8,
+                            "sizeRange": [
+                                0,
+                                10
+                            ],
+                            "radiusRange": [
+                                0,
+                                50
+                            ],
+                            "heightRange": [
+                                0,
+                                500
+                            ],
+                            "elevationScale": 5,
+                            "enableElevationZoomFactor": true,
+                            "stroked": false,
+                            "filled": true,
+                            "enable3d": false,
+                            "wireframe": false
+                        },
+                        "hidden": false,
+                        "textLabel": [
+                            {
+                                "field": null,
+                                "color": [
+                                    255,
+                                    255,
+                                    255
+                                ],
+                                "size": 18,
+                                "offset": [
+                                    0,
+                                    0
+                                ],
+                                "anchor": "start",
+                                "alignment": "center"
+                            }
+                        ]
+                    },
+                    "visualChannels": {
+                        "colorField": {
+                            "name": "label",
+                            "type": "integer"
+                        },
+                        "colorScale": "quantile",
+                        "strokeColorField": null,
+                        "strokeColorScale": "quantile",
+                        "sizeField": null,
+                        "sizeScale": "linear",
+                        "heightField": null,
+                        "heightScale": "linear",
+                        "radiusField": null,
+                        "radiusScale": "linear"
+                    }
+                },
+                {
+                    "id": "wpzjjkr",
+                    "type": "geojson",
+                    "config": {
+                        "dataId": "mahalle",
+                        "label": "mahalle",
+                        "color": [
+                            255,
+                            203,
+                            153
+                        ],
+                        "columns": {
+                            "geojson": "geometry"
+                        },
+                        "isVisible": true,
+                        "visConfig": {
+                            "opacity": 0.8,
+                            "strokeOpacity": 0.8,
+                            "thickness": 0.5,
+                            "strokeColor": [
+                                248,
+                                149,
+                                112
+                            ],
+                            "colorRange": {
+                                "name": "Global Warming",
+                                "type": "sequential",
+                                "category": "Uber",
+                                "colors": [
+                                    "#5A1846",
+                                    "#900C3F",
+                                    "#C70039",
+                                    "#E3611C",
+                                    "#F1920E",
+                                    "#FFC300"
+                                ]
+                            },
+                            "strokeColorRange": {
+                                "name": "Global Warming",
+                                "type": "sequential",
+                                "category": "Uber",
+                                "colors": [
+                                    "#5A1846",
+                                    "#900C3F",
+                                    "#C70039",
+                                    "#E3611C",
+                                    "#F1920E",
+                                    "#FFC300"
+                                ]
+                            },
+                            "radius": 10,
+                            "sizeRange": [
+                                0,
+                                10
+                            ],
+                            "radiusRange": [
+                                0,
+                                50
+                            ],
+                            "heightRange": [
+                                0,
+                                500
+                            ],
+                            "elevationScale": 5,
+                            "enableElevationZoomFactor": true,
+                            "stroked": true,
+                            "filled": false,
+                            "enable3d": false,
+                            "wireframe": false
+                        },
+                        "hidden": false,
+                        "textLabel": [
+                            {
+                                "field": null,
+                                "color": [
+                                    255,
+                                    255,
+                                    255
+                                ],
+                                "size": 18,
+                                "offset": [
+                                    0,
+                                    0
+                                ],
+                                "anchor": "start",
+                                "alignment": "center"
+                            }
+                        ]
+                    },
+                    "visualChannels": {
+                        "colorField": null,
+                        "colorScale": "quantile",
+                        "strokeColorField": null,
+                        "strokeColorScale": "quantile",
+                        "sizeField": null,
+                        "sizeScale": "linear",
+                        "heightField": null,
+                        "heightScale": "linear",
+                        "radiusField": null,
+                        "radiusScale": "linear"
+                    }
+                },
+                {
+                    "id": "mybvs88",
+                    "type": "heatmap",
+                    "config": {
+                        "dataId": "hgoods",
+                        "label": "hgoods",
+                        "color": [
+                            231,
+                            159,
+                            213
+                        ],
+                        "columns": {
+                            "lat": "latitude",
+                            "lng": "longitude"
+                        },
+                        "isVisible": true,
+                        "visConfig": {
+                            "opacity": 0.14,
+                            "colorRange": {
+                                "name": "Global Warming",
+                                "type": "sequential",
+                                "category": "Uber",
+                                "colors": [
+                                    "#5A1846",
+                                    "#900C3F",
+                                    "#C70039",
+                                    "#E3611C",
+                                    "#F1920E",
+                                    "#FFC300"
+                                ]
+                            },
+                            "radius": 10
+                        },
+                        "hidden": false,
+                        "textLabel": [
+                            {
+                                "field": null,
+                                "color": [
+                                    255,
+                                    255,
+                                    255
+                                ],
+                                "size": 18,
+                                "offset": [
+                                    0,
+                                    0
+                                ],
+                                "anchor": "start",
+                                "alignment": "center"
+                            }
+                        ]
+                    },
+                    "visualChannels": {
+                        "weightField": null,
+                        "weightScale": "linear"
+                    }
+                }
+            ],
+            "interactionConfig": {
+                "tooltip": {
+                    "fieldsToShow": {
+                        "point": [
+                            {
+                                "name": "isim",
+                                "format": null
+                            }
+                        ],
+                        "mahalle": [
+                            {
+                                "name": "key",
+                                "format": null
+                            }
+                        ],
+                        "hgoods": [
+                            {
+                                "name": "isim",
+                                "format": null
+                            },
+                            {
+                                "name": "il",
+                                "format": null
+                            },
+                            {
+                                "name": "ilce",
+                                "format": null
+                            },
+                            {
+                                "name": "il-tr",
+                                "format": null
+                            },
+                            {
+                                "name": "ilce-tr",
+                                "format": null
+                            }
+                        ],
+                        "stores": [
+                            {
+                                "name": "isim",
+                                "format": null
+                            },
+                            {
+                                "name": "il",
+                                "format": null
+                            },
+                            {
+                                "name": "ilce",
+                                "format": null
+                            },
+                            {
+                                "name": "mahalle",
+                                "format": null
+                            },
+                            {
+                                "name": "label",
+                                "format": null
+                            }
+                        ]
+                    },
+                    "compareMode": false,
+                    "compareType": "absolute",
+                    "enabled": true
+                },
+                "brush": {
+                    "size": 0.5,
+                    "enabled": false
+                },
+                "geocoder": {
+                    "enabled": false
+                },
+                "coordinate": {
+                    "enabled": false
+                }
+            },
+            "layerBlending": "normal",
+            "splitMaps": [],
+            "animationConfig": {
+                "currentTime": null,
+                "speed": 1
+            }
+        },
+        "mapState": {
+            "bearing": 0,
+            "dragRotate": false,
+            "latitude": 41.03719668368781,
+            "longitude": 28.855154790086253,
+            "pitch": 0,
+            "zoom": 13.202325686710978,
+            "isSplit": false
+        },
+        "mapStyle": {
+            "styleType": "light",
+            "topLayerGroups": {},
+            "visibleLayerGroups": {
+                "label": true,
+                "road": true,
+                "border": false,
+                "building": true,
+                "water": true,
+                "land": true,
+                "3d building": false
+            },
+            "threeDBuildingColor": [
+                218.82023004728686,
+                223.47597962276103,
+                223.47597962276103
+            ],
+            "mapStyles": {}
+        }
+    }
+}
