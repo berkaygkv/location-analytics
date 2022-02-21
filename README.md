@@ -1,9 +1,8 @@
-===============================geo-clustering-project===============================
+# Location Analytics
 
 Location based site planning analysis
 
-Project Organization
---------------------
+## Project OrganizationProject Organization
 
 ├── LICENSE
 ├── Makefile           <- Makefile with commands like `make data` or `make train`
@@ -49,7 +48,7 @@ Project Organization
 │       └── visualize.py
 │
 └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
----
+-------------------------------------------------------------------------------------------
 
 or running tox; see tox.readthedocs.io
 
