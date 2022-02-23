@@ -41,7 +41,7 @@ def haversine(geo1, geo2):
     c = 2 * math.asin(math.sqrt(a))
     return rad * c
 
-def get_epsilon(df_rakip):
+def get_epsilon(df_rakip, split=False):
     """
     DBScan'de kullan?lacak epsilon parametresini hesaplama fonksiyonu. 
     
@@ -83,15 +83,15 @@ def get_epsilon(df_rakip):
     # Büyüme hesab? için kullan?lan threshold (minimum 2500 metre olarak kabul edilmi?tir.)
     distance_threshold = round((distance_std * 0.6 + epsilon_value * 0.4) * 2.6, 1) * 1000
     distance_threshold = min(distance_threshold, 2500)
-    
-    if epsilon_value >= 0.75:
-        epsilon_value = 0.75
-        centroid_distance_param = 0.75 * 1.4
+    if not split:
+        if epsilon_value >= 0.75:
+            epsilon_value = 0.75
+            centroid_distance_param = 0.75 * 1.4
 
-    elif epsilon_value <= 0.18:
-        epsilon_value = 0.18
-        centroid_distance_param = 0.18 * 1.4
-        
+        elif epsilon_value <= 0.18:
+            epsilon_value = 0.18
+            centroid_distance_param = 0.18 * 1.4
+    
     return epsilon_value, centroid_distance_param, distance_threshold
 
 def read_rakip_df(city_name, data_path):

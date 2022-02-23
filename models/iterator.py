@@ -8,8 +8,8 @@ drop_cities = os.listdir('../reports/cities')
 #print(df['Ýl'].unique())
 
 # ----- Slicing ------
-latest_il = "Kilis"
-df = df.drop_duplicates(subset=["Ýl"]).set_index("Ýl").loc[latest_il:].reset_index()
+# latest_il = "Kilis"
+# df = df.drop_duplicates(subset=["Ýl"]).set_index("Ýl").loc[latest_il:].reset_index()
 # --------------------
 
 ls = df['Ýl'].unique().tolist()
