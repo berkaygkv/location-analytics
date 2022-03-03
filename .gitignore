@@ -94,3 +94,5 @@ reports/
 notebooks/Aggregate_nb.ipynb
 notebooks/geo_clustering_nb copy.ipynb
 config.yaml
+mlruns
+notebooks/pazar.html
