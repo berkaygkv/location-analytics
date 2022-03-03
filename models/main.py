@@ -21,7 +21,7 @@ pm.execute_notebook('notebooks/geo_clustering_nb.ipynb',
                     parameters={
                         'city_name': city_name
                     }, 
-                    report_mode=True, request_save_on_cell_execute=True)
+                    report_mode=True, request_save_on_cell_execute=False)
 
 target_nb = f'{report_path}/geo_clustering_nb_{city_name}.ipynb'
 target_html = f'geo_clustering_nb_{city_name}.html'
