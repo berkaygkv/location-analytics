@@ -1,4 +1,4 @@
-# encoding: iso-8859-9
+# encoding: windows-1254
 
 import pandas as pd
 from pandas import ExcelWriter
