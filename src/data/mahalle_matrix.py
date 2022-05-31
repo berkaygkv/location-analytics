@@ -5,16 +5,11 @@ import numpy as np
 import yaml
 import time
 import os
-
-config_file_path = "config.yaml"
-if not os.path.exists(config_file_path):
-    config_file_path = "../config.yaml"
-
-with open(config_file_path, "r") as f:
-    configs = yaml.safe_load(f)
+from src.data.load_cfg import load_config
 
 
 def next_geo_matrix_service(points):
+    configs = load_config()
     url = configs["APIs"]["DISTRICT_MATRIX_SERVICE"]["API_KEY"]
     payload = json.dumps({"points": points, "distance": 2500})
     headers = {

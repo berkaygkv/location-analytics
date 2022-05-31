@@ -132,6 +132,8 @@ def read_rakip_df(city_name, data_path):
             "İlçe": "ilce",
         }
     )
+    df_rakip["latitude"] = df_rakip["latitude"].astype(float)
+    df_rakip["longitude"] = df_rakip["longitude"].astype(float)
 
     return df_rakip
 
