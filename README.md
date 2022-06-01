@@ -23,7 +23,7 @@
 ---
 **Yayýlým Algoritmasý**; halihazýrda açýk maðazalarýn **lokasyonlarýnýn**, **Ýllerin, ilçelerin ve mahallelerin özel durumlarý** dikkate alýnarak, yeni açýlacak maðazalar için **en uygun** alanlarý tespit etmek.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">Tepeye çýk</a>)</p>
 
 ## **SÜREÇ**
 ---
@@ -32,7 +32,7 @@
 Buna baðlý olarak potansiyeli olan bölgeler farklý parametrelerin de yardýmýyla tespit edildi ve puanlandý. Cluster dýþý outlier noktalarýn analizi de
 tamamlandý. Algoritma her gün geliþtiriliyor ve daha sofistike hale getiriliyor.
 
-<p align="right">(<a href="#top">Bölümün tepesine çýk</a>)</p>
+<p align="right">(<a href="#top">Tepeye çýk</a>)</p>
 
 
 ---
@@ -63,7 +63,7 @@ python iterator.py
 ```
 Kodlarýný kullanarak uygulamayý baþlatabiliriz.
 
-<p align="right">(<a href="#top">Bölümün tepesine çýk</a>)</p>
+<p align="right">(<a href="#top">Tepeye çýk</a>)</p>
 
 
 
@@ -128,7 +128,7 @@ Kodlarýný kullanarak uygulamayý baþlatabiliriz.
 
 
 
-<p align="right">(<a href="#top">Bölümün tepesine çýk</a>)</p>
+<p align="right">(<a href="#top">Tepeye çýk</a>)</p>
 
 ---
 
