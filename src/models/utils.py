@@ -107,13 +107,14 @@ def get_epsilon(df_rakip, split=False):
 
 
 def read_rakip_df(city_name, data_path):
-    rename_cols = ["ID", "Marka", "Ýl", "Ýlçe", "Mahalle", "Latitude", "Longitude"]
+    rename_cols = ["ID", "Marka", "Ýl", "Ýlçe", "Mahalle", "Mahalle Kodu", "Latitude", "Longitude"]
     use_cols = [
         "Nokta ID",
         "Kategori 5",
         "Ýl",
         "Ýlçe",
         "Mahalle",
+        "Mahalle Kodu",
         "Latitude - Enlem - Y",
         "Longitude - Boylam - X",
     ]
@@ -125,6 +126,7 @@ def read_rakip_df(city_name, data_path):
     df_rakip = df_rakip.copy().rename(
         columns={
             "Mahalle": "mahalle",
+            "Mahalle Kodu": "mahalle_kodu",
             "Latitude": "latitude",
             "Longitude": "longitude",
             "Marka": "isim",
