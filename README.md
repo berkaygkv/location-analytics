@@ -1,57 +1,134 @@
-Location Analytics
-==============================
+# **YAYILIM ALGORÝTMASI**
 
-Location based site planning analysis
+<details>
+  <summary>Ýçindekiler</summary>
+  <ol>
+    <li>
+      <a href="#### **AMAÇ**">Amaç</a>
+      </ul>
+    </li>
+    <li>
+      <a href="#### **SÜREÇ**">Süreç</a>
+      </ul>
+    </li>
+    <li><a href="#### **KULLANIM**">Kullaným</a></li>
+    <li><a href="#### **YOL HARÝTASI**">Yol Haritasý</a></li>
+  </ol>
+</details>
 
-Project Organization
-------------
-
-    â”œâ”€â”€ LICENSE
-    â”œâ”€â”€ Makefile           <- Makefile with commands like `make data` or `make train`
-    â”œâ”€â”€ README.md          <- The top-level README for developers using this project.
-    â”œâ”€â”€ data
-    â”‚Â Â  â”œâ”€â”€ external       <- Data from third party sources.
-    â”‚Â Â  â”œâ”€â”€ interim        <- Intermediate data that has been transformed.
-    â”‚Â Â  â”œâ”€â”€ processed      <- The final, canonical data sets for modeling.
-    â”‚Â Â  â””â”€â”€ raw            <- The original, immutable data dump.
-    â”‚
-    â”œâ”€â”€ docs               <- A default Sphinx project; see sphinx-doc.org for details
-    â”‚
-    â”œâ”€â”€ models             <- Trained and serialized models, model predictions, or model summaries
-    â”‚
-    â”œâ”€â”€ notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    â”‚                         the creator's initials, and a short `-` delimited description, e.g.
-    â”‚                         `1.0-jqp-initial-data-exploration`.
-    â”‚
-    â”œâ”€â”€ references         <- Data dictionaries, manuals, and all other explanatory materials.
-    â”‚
-    â”œâ”€â”€ reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    â”‚Â Â  â””â”€â”€ figures        <- Generated graphics and figures to be used in reporting
-    â”‚
-    â”œâ”€â”€ requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    â”‚                         generated with `pip freeze > requirements.txt`
-    â”‚
-    â”œâ”€â”€ setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    â”œâ”€â”€ src                <- Source code for use in this project.
-    â”‚Â Â  â”œâ”€â”€ __init__.py    <- Makes src a Python module
-    â”‚   â”‚
-    â”‚Â Â  â”œâ”€â”€ data           <- Scripts to download or generate data
-    â”‚Â Â  â”‚Â Â  â””â”€â”€ make_dataset.py
-    â”‚   â”‚
-    â”‚Â Â  â”œâ”€â”€ features       <- Scripts to turn raw data into features for modeling
-    â”‚Â Â  â”‚Â Â  â””â”€â”€ build_features.py
-    â”‚   â”‚
-    â”‚Â Â  â”œâ”€â”€ models         <- Scripts to train models and then use trained models to make
-    â”‚   â”‚   â”‚                 predictions
-    â”‚Â Â  â”‚Â Â  â”œâ”€â”€ predict_model.py
-    â”‚Â Â  â”‚Â Â  â””â”€â”€ train_model.py
-    â”‚   â”‚
-    â”‚Â Â  â””â”€â”€ visualization  <- Scripts to create exploratory and results oriented visualizations
-    â”‚Â Â      â””â”€â”€ visualize.py
-    â”‚
-    â””â”€â”€ tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+---
 
 
---------
+## **AMAÇ**
+---
+**Yayýlým Algoritmasý**; halihazýrda açýk maðazalarýn **lokasyonlarýnýn**, **Ýllerin, ilçelerin ve mahallelerin özel durumlarý** dikkate alýnarak, yeni açýlacak maðazalar için **en uygun** alanlarý tespit etmek.
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## **SÜREÇ**
+---
+Önce Vestel'in ve rakiplerinin maðazalarýnýn **coðrafi konumlanmalarý** analiz edildi. Maðazalarýn kapsam alanlarýnýn ilçe veya mahalle sýnýrlarýyla belirlenmesi pek **açýklayýcý olmadý**. Bu sebeple maðazalarýn gruplanmalarýna göre, analizimizi anlamlandýrmak adýna suni "mahalleler", yani **cluster**'lar oluþturuldu. 
+
+Buna baðlý olarak potansiyeli olan bölgeler farklý parametrelerin de yardýmýyla tespit edildi ve puanlandý. Cluster dýþý outlier noktalarýn analizi de
+tamamlandý. Algoritma her gün geliþtiriliyor ve daha sofistike hale getiriliyor.
+
+<p align="right">(<a href="#top">Bölümün tepesine çýk</a>)</p>
+
+
+---
+## **KULLANIM**
+Terminal Ekraný açýp Directory'i projenin path'i olarak deðiþtiriyoruz. Burada önemli husus; ilgili virtual environment'ýn aktif olmasý. 
+
+```powershell
+cd {PROJECT_PATH}
+```
+
+Bu noktada "Models" Klasörüne girerek iki þekilde kodu çalýþtýrabiliriz:
+  - Ýl parametresini tekil olarak verebiliriz,
+  - Tüm illeri iteratif olarak çalýþtýrabiliriz.
+
+```powershell
+cd models
+```
+
+
+__Tekil Kullaným Ýçin:__
+```powershell
+python main.py Ýstanbul
+```
+
+__Tüm Ýller Ýçin:__
+```powershell
+python iterator.py
+```
+Kodlarýný kullanarak uygulamayý baþlatabiliriz.
+
+<p align="right">(<a href="#top">Bölümün tepesine çýk</a>)</p>
+
+
+
+## **YOL HARÝTASI**
+
+### **1. Harita bazlý yayýlým çalýþmasýna odaklanýldýktan sonra tamamlanan iþler** : 
+- [X] Ýstanbul özelinde dbscan ile clustering yapýlmasý
+
+- [X] Next Geo entegrasyonu
+
+- [X] Patching yapýlarak outlier noktalara ikinci þans verilmesi
+
+- [X] Ankara özelinde clustering yapýlmasý
+
+- [X] Rekabet ve büyüme bazlý maðaza ihtiyaçlarýnýn çýkartýlmasý (Gap Analizi)
+
+- [X] Gap Analizinin kodlanmasý
+
+- [X] Ýstanbul ve Ankara’da kullanýlan parametreler deðerlendirilerek matematiksel model aracýlýðýyla parametrelerin dinamik hale getirilmesi 
+
+- [X] Ýl içerisinde açýlacak maðazalarýn önceliklendirilmesi (sýralandýrýlmasý)
+
+- [X] Algoritmanýn 81 ilde çalýþacak þekilde otomatize edilmesi
+
+- [X] 81 il sonuçlarýný geniþ açýdan görüntüleyebilmek/kontrol edebilmek için kokpit excelinin oluþturulmasý (Büyük excel)
+
+- [X] Ýl Bazlý Pazar Payý çalýþmasý için mahalle bazlý pazar kýrýlýmýnýn yapýlmasý
+
+- [X] Kapanma algoritmasýnýn oluþturulmasý
+
+- [X] Outlier nokta vs. clusterdaki nokta performans karþýlaþtýrmasý 
+
+- [X] Maðaza tipine göre performans karþýlaþtýrmasý (Bayi vs. Ekspres vs. Kurumsal)
+
+### **2. Mevcutta üzerinde çalýþýlan iþler :** 
+- [ ] Vestel Cirolarý ile il bazlý pazar kýyaslanarak il bazlý pazar payý oranlarýnýn çýkartýlmasý 
+
+- [ ] Mahalle ve Cluster arasýndaki iliþkinin matematiksel olarak modellenmesi ve clusterdaki pazarýn büyüklüðünün tahminlenmesi 
+
+- [ ] Kokpit exceli kullanýlarak il bazlý durum tespiti ve alýnabilecek aksiyonlar çalýþmasýnýn tamamlanmasý 
+
+- [ ] Yayýlým Çýktý excellerine Özet sayfa eklenecek
+
+- [ ] 2 il problemi 
+- [ ] Dökümantasyon ve kod sadeleþtirilmesi
+
+### **3. Bir sonraki adýmda yapýlacaklar :**
+- [ ] Bir maðazanýn performansýnýn ölçümlenmesi, sonrasýnda da yeni açýlacak bir maðazanýn cirosunun tahminlenmesi
+
+- [ ] Ýl içerisinde açýlacak maðazalarýn önceliklendirilmesi (sýralandýrýlmasý) // UPDATE 
+
+- [ ] Vestel’i pozitif etkileyen markalar -> Maðaza tipi kýrýlýmlý 
+
+- [ ] Montaj datasýnýn analiz edilmesi
+
+- [ ] Hangi tipte maðaza açacaðýz sorusunun cevabýna ulaþmak (Tüm çalýþmalarý birleþtirerek verisel olarak bir çýkarým yapabiliyor muyuz? Eðer hayýr ise, kanal konumlandýrýlmasýnýn tamamlanmasý beklenecek.)
+
+- [ ] Çýktýlarýn nereden servis edileceðinin netleþtirilmesi 
+
+
+
+
+
+
+<p align="right">(<a href="#top">Bölümün tepesine çýk</a>)</p>
+
+---
+
